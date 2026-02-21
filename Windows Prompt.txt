@@ -1,0 +1,53 @@
+Usar programa Windows terminal, que pode ser baixado pela microsoft store, que é praticamente o cmd só que mais agradável para o usuario, tanto em aparencia quanto em funcoes QoL. Ele também usa o PowerShell mas voce pode escolher QUAL TIPO DE TERMINAL USAR, inclusive terminais linux por meio do wsl
+
+Dicionário de Explicação de comandos:
+
+{} = o comando pode ser usado sem adicionar nada (ex: C:\> dir), ou podendo inserir as tags abaixo na frente
+{.} = o comando não efetua nada sem adicionar algo (ex: C:\> cd), precisando inserir uma das tags abaixo na frente
+{nome} = nome da pasta desejada ou do arquivo desejado
+{endereço} = endereço de uma pasta. ex: D:\Jogos\Fortnite -- ./{nome} -- ../..
+. = pasta atual
+./{nome} = pasta a frente
+.\{nome} = abre/executa um arquivo
+.. = pasta anterior
+../.. = duas pastas anteriores (e por aí vai)
+../{nome} = pasta ou arquivo de dentro da pasta anterior
+/ = pasta raiz do diretório, normalmente C:
+* = todos os arquivos
+*.extensão = todos os arquivos de uma extensão específica
+
+Comandos do CMD:
+
+help: temos a ajuda de todos os comandos, ou de um comando em específico se escrito a frente
+cls: limpa o terminal
+dir {}: lista os arquivos e pastas do diretório atual ou de outro diretório
+mkdir {nome}: cria uma nova pasta
+rmdir {nome}: deleta uma pasta
+cd {.}: mudar de diretório
+tree {}: lista os arquivos e pastas do diretorio atual ou de outro diretorio, em formato de ramificações
+type {nome}: vemos o conteúdo de texto de um arquivo
+findstr {nome} {endereço}: vemos a linha que possui o que procuramos dentro do texto
+more {nome}: mesma coisa de type, só que divide os textos em páginas para lermos com calma
+move {nome} {endereço}: move um arquivo ou pasta, do diretório atual, para um outro destino
+copy {nome} {nome}: cria uma cópia de um arquivo ou pasta
+rename {nome} {nome}: renomeia um arquivo ou pasta
+del {nome}: deleta um arquivo ou pasta
+fc {nome} {nome}: vê a diferença entre dois arquivos ou pastas>
+
+notepad: abre o bloco de notas
+echo {texto}: exibe um texto no terminal de um script
+@echo off: mostra apenas textos no terminal e oculta comandos de um script
+pause: exibe "pressione qualquer tecla para continuar" no terminal
+2> {nome}: escrito no final de uma linha de código, serve para que redirecionar os erros de um comando para um arquivo, mantendo o terminal limpo
+1> {nome}: mesma coisa do de cima, mas para registrar os textos de saída do terminal
+0> {nome}: mesma coisa do de cima, mas para registrar os comandos do terminal
+
+tar: compactar arquivos
+	-cf {nome} {arquivos em sequencia}= criar compactação e dar um nome
+	-tf {nome} = lista tudo que ta compactado em um tar
+	-xf {nome} = descompacta tar
+
+set variavel= = cria uma variavel com um comando ou com um texto
+setx path "%path%;{endereço}" /M= salva scripts de uma pasta como variavel do sistema (/m) para ser usado a qualquer momento sem apagar as variaveis ja registradas
+%variavel%: executa uma variavel, seja um texto (echo na frente) ou um comanado
+/p (apos o set) = pede para que o usuario insira um valor, como se fosse inserir um email ou nome por exemplo
